@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <svg xmlns="http://www.w3.org/2000/svg">    
+        <filter id="motion-blur-filter" filterUnits="userSpaceOnUse">
+            
+            <feGaussianBlur stdDeviation="100 0"></feGaussianBlur>
+        </filter>
+    </svg>
+
+    <span filter-content="S">Christian's Soundboard</span>
+  
+   <div class="btn-group">
+        <button id="btn1" onclick = "bowlingAudio.play();">Bowling Sound</button>
+        <button id="btn2" onclick = "boxingAudio.play();">Boxing Bell</button>
+        <button id="btn3" onclick = "bubblingAudio.play();">Bubbling</button>
+    </div>
+
+        <script src="soundboard.js" async defer></script>
+    </body>
+</html>

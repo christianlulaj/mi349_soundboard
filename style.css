@@ -1,0 +1,74 @@
+/* We’ll set some colors and center everything. */
+
+body {
+    background: #4c268f;
+    color: #99eeb4;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* We set the position to relative so that we can stack a blurred pseudo element on top of the original text */
+  
+  span {
+    position: relative;
+    font-family: "Avenir Next", sans-serif;
+    font-weight: 900;
+    font-size: 64px;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 0.05em;
+    display: inline-block;
+  }
+  
+  /* We create a pseudo element and blur it using the SVG filter. We’ll grab the content from the custom HTML attribute. */
+  
+  span:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: attr(filter-content);
+  
+    filter: url(#motion-blur-filter);
+  }
+  
+  /* We hide the SVG filter element from the DOM as it would take up some space */
+  
+  svg {
+    display: none;
+  }
+
+.btn-group button {
+    background-color: #04AA6D; 
+    border: 1px solid green; 
+    color: white; 
+    padding: 10px 24px; 
+    cursor: pointer;
+    width: 100%; 
+    display: block;
+    align-content: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 350px;
+    width: 200px;
+    height: 70px;
+    border-width: 4px;
+    border-radius: 35px;
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+
+
+  }
+  
+  .btn-group button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+  }
+  
+  /* Add a background color on hover */
+  .btn-group button:hover {
+    background-color: #3e8e41;
+  }
+
+
+  
